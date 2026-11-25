@@ -1,0 +1,89 @@
+
+<%- include('../partials/head', { title: 'Home' }) %>
+<%- include('../partials/header') %>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <span class="hero-tag">LEARN • BUILD • SUCCEED</span>
+
+        <h1>Build Your Future With <span>OG Academy</span></h1>
+
+        <p>
+            Upgrade your skills with industry-focused courses,
+            practical training and expert guidance.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="/courses" class="btn">Explore Courses</a>
+            <a href="/about" class="secondary-btn">Discover More</a>
+        </div>
+    </div>
+</section>
+
+<!-- Statistics -->
+<section class="stats-section">
+    <div class="stat">
+        <h2>5+</h2>
+        <p>Professional Courses</p>
+    </div>
+
+    <div class="stat">
+        <h2>100%</h2>
+        <p>Skill Focused Learning</p>
+    </div>
+
+    <div class="stat">
+        <h2>24/7</h2>
+        <p>Learning Opportunities</p>
+    </div>
+</section>
+
+<!-- Popular Courses -->
+<section class="home-courses">
+    <h2>Explore Our Popular Courses</h2>
+    <p>Choose the right skill for your career journey.</p>
+
+    <div class="course-container">
+
+        <% courses.slice(0, 3).forEach(course => { %>
+
+            <%- include('../partials/course-card', { course: course }) %>
+
+        <% }) %>
+
+    </div>
+
+    <a href="/courses" class="btn">View All Courses</a>
+</section>
+
+<!-- Why Choose Us -->
+<section class="why-section">
+    <h2>Why Choose OG Academy?</h2>
+
+    <div class="why-container">
+        <div class="why-card">
+            <h3>Practical Learning</h3>
+            <p>Learn through hands-on projects and real-world examples.</p>
+        </div>
+
+        <div class="why-card">
+            <h3>Industry Relevant Skills</h3>
+            <p>Develop skills that are useful in today's technology industry.</p>
+        </div>
+
+        <div class="why-card">
+            <h3>Career Growth</h3>
+            <p>Build your knowledge and prepare for future opportunities.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Final CTA -->
+<section class="home-cta">
+    <h2>Ready to Start Learning?</h2>
+    <p>Your future starts with the skills you build today.</p>
+    <a href="/courses" class="btn">Get Started</a>
+</section>
+
+<%- include('../partials/footer') %>

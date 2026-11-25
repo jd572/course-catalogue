@@ -1,0 +1,22 @@
+
+<%- include('../partials/head', { title: 'Enrollment Successful' }) %>
+
+<%- include('../partials/header') %>
+
+<main class="container enrollment-success">
+
+    <h1>Enrollment Successful!</h1>
+
+    <p>Thank you, <strong><%= studentName %></strong>!</p>
+
+    <p>You have successfully submitted your enrollment for:</p>
+
+    <h2><%= course.name %></h2>
+
+    <p>Our team will contact you using your registered email address.</p>
+
+    <a href="/courses" class="btn">Explore More Courses</a>
+
+</main>
+
+<%- include('../partials/footer') %>

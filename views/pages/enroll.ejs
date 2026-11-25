@@ -1,0 +1,30 @@
+
+<%- include('../partials/head', { title: 'Course Enrollment' }) %>
+
+<%- include('../partials/header') %>
+
+<main class="container">
+
+    <h1>Enroll in <%= course.name %></h1>
+    <p>Fill in your details to enroll in this course.</p>
+
+    <form action="/enroll/<%= course.id %>" method="POST" class="enrollment-form">
+
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <button type="submit" class="btn">Submit Enrollment</button>
+
+    </form>
+
+    <p><a href="/courses">Back to Courses</a></p>
+
+</main>
+
+<%- include('../partials/footer') %>

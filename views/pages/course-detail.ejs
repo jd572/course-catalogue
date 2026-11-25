@@ -1,0 +1,46 @@
+
+<%- include('../partials/head', { title: title }) %>
+
+<%- include('../partials/header') %>
+
+<main class="container">
+
+    <div class="detail-card">
+
+        <h1><%= course.name %></h1>
+
+        <hr>
+
+        <p>
+            <strong>Course ID:</strong>
+            <%= course.id %>
+        </p>
+
+        <p>
+            <strong>Category:</strong>
+            <%= course.category %>
+        </p>
+
+        <p>
+            <strong>Duration:</strong>
+            <%= course.duration %>
+        </p>
+
+        <p>
+            <strong>Course Fee:</strong>
+            ₹<%= course.price %>
+        </p>
+
+        <h3>Course Description</h3>
+
+        <p><%= course.description %></p>
+
+        <a href="/courses" class="btn">
+            Back to Courses
+        </a>
+
+    </div>
+
+</main>
+
+<%- include('../partials/footer') %>

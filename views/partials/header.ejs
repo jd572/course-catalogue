@@ -1,0 +1,27 @@
+
+<header class="navbar">
+    <div class="nav-container">
+
+        <a href="/" class="logo">OG Academy</a>
+
+        <button class="menu-toggle" id="menuToggle">
+            ☰
+        </button>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="/">Home</a>
+            <a href="/courses">Courses</a>
+            <a href="/about">About</a>
+        </nav>
+
+    </div>
+</header>
+
+<script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
+</script>
